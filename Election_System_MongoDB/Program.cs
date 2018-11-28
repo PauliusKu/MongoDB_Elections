@@ -10,15 +10,16 @@ namespace Election_System_MongoDB
 {
     class Program
     {
-        public static class DbConn
-        {
-            public static readonly MongoClient client = new MongoClient();
-        }
 
         static void Main(string[] args)
         {
             Menu menu = new Menu();
             menu.StartMenu();
         }
+    }
+
+    public static class DbConn
+    {
+        public static readonly MongoClient client = new MongoClient();
     }
 }

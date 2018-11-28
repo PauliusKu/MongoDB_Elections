@@ -14,7 +14,8 @@ namespace Election_System_MongoDB
 
             Functions func = new Functions();
 
-            Console.WriteLine("Welcome to Election System! Choose a function");
+            InitialMessage();
+
             Menu:
                 input = Console.ReadLine();
                 switch (input)
@@ -28,6 +29,7 @@ namespace Election_System_MongoDB
                         break;
                     case "3":
                         Console.WriteLine("You chosen Create Constituency");
+                    func.CreateConstituency();
                         break;
                     case "4":
                         Console.WriteLine("You chosen Vote");
@@ -49,6 +51,18 @@ namespace Election_System_MongoDB
             ExitMenu:
             Console.WriteLine("Thank You for using our great program!");
             Console.ReadKey();
+        }
+
+        private void InitialMessage()
+        {
+            Console.WriteLine("Welcome to Election System! Choose a function:");
+            Console.WriteLine("1 - Regsiter Candidate");
+            Console.WriteLine("2 - Register Voter");
+            Console.WriteLine("3 - Create Constituency");
+            Console.WriteLine("4 - Vote");
+            Console.WriteLine("5 - Calculate Result");
+            Console.WriteLine("6 - Init Database");
+            Console.WriteLine("7 - Exit");
         }
     }
 }
