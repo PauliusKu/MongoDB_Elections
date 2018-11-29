@@ -26,16 +26,19 @@ namespace Election_System_MongoDB
                         break;
                     case "2":
                         Console.WriteLine("You chosen Register Voter");
+                        func.RegisterVoter();
                         break;
                     case "3":
                         Console.WriteLine("You chosen Create Constituency");
-                    func.CreateConstituency();
+                        func.CreateConstituency();
                         break;
                     case "4":
                         Console.WriteLine("You chosen Vote");
+                        func.Vote();
                         break;
                     case "5":
                         Console.WriteLine("You chosen Calculate Result");
+                        func.CalcResult();
                         break;
                     case "6":
                         Console.WriteLine("You chosen Init Database");

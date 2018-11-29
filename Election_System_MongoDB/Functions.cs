@@ -12,31 +12,35 @@ namespace Election_System_MongoDB
         {
             Data data = new Data();
             data.CreateCandidate();
-            Console.WriteLine("Constituency created");
+            Console.WriteLine("Candidate Registred");
         }
 
         public void RegisterVoter()
         {
             Data data = new Data();
             data.CreateVoter();
-            Console.WriteLine("Constituency created");
+            Console.WriteLine("Voter Registred.");
         }
 
         public void CreateConstituency()
         {
             Data data = new Data();
             data.CreateConstituency();
-            Console.WriteLine("Constituency created");
+            Console.WriteLine("Constituency created.");
         }
 
         public void Vote()
         {
-
+            Data data = new Data();
+            data.CreateBallot();
+            Console.WriteLine("Voted");
         }
 
         public void CalcResult()
         {
-
+            Data data = new Data();
+            data.CalculateResults();
+            Console.WriteLine("Done");
         }
 
         public void InitDatabase()
