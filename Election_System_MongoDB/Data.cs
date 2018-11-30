@@ -333,6 +333,31 @@ namespace Election_System_MongoDB
                     " " + i.Party + ": " + sum + " votes" );
             }
 
+            //MapReduce();
+
+        }
+
+        private void MapReduce()
+        {
+            var collection = database.GetCollection<Candidate>("candidate");
+
+            var map = @" function m() {
+            //for(var i in this.Results.Cand_results)
+            //{
+            //    //emit(this._id, this.Results.Cand_results[i].Num_of_votes)
+            //}
+            }";
+
+            var reduce = @" function r(key, value) {
+                //return Array.sum(value)
+            }";
+
+            var result = collection.MapReduce<int>(map, reduce);
+            
+            foreach(var i in result.Current)
+            {
+                Console.WriteLine(i);
+            }
         }
 
         private List<Constituency> GetConstituencies()
